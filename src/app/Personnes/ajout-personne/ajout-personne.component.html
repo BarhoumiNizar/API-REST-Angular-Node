@@ -1,0 +1,7 @@
+<p>ajout-personne works!</p>
+<form #userForm="ngForm" (ngSubmit)="addPersonne(userForm.value)">
+    <input type="text" name="nom" placeholder="id" ngModel><br>
+    <input type="text" name="prenom" placeholder="action" ngModel><br>
+
+    <button type="submit">create</button>
+</form>

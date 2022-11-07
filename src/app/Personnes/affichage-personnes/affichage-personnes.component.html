@@ -1,0 +1,26 @@
+<p>Liste des personne {{ personnes.length}}</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr *ngFor="let pers of personnes;let id=index">
+            <th scope="row">{{id+1}}</th>
+            <td>{{pers.nom}}</td>
+            <td>{{pers.prenom}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deletePersonne(pers._id)">Supprimer</button>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
